@@ -52,7 +52,7 @@ app.post('/api/sitios', (req, res) => {
 // Read
 app.get('/api/sitios', (req, res) => {
 
-    const consulta = 'SELECT * FROM Sitios';
+    const consulta = 'SELECT Id, Descripcion, Latitud, Longitud  FROM Sitios';
     db.query(consulta, (err, result) => {
         if (err) {
             res.status(500).send();
