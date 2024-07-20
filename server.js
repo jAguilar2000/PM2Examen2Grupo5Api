@@ -52,7 +52,7 @@ app.post('/api/sitios', (req, res) => {
 // Read
 app.get('/api/sitios', (req, res) => {
 
-    const consulta = `SELECT Id, Descripcion, Latitud, Longitud, CAST(FirmaDigital AS CHAR) 'FirmaDigital', , CAST(AudioFile AS CHAR) 'AudioFile' FROM Sitios`;
+    const consulta = `SELECT Id, Descripcion, Latitud, Longitud, CAST(FirmaDigital AS CHAR) 'FirmaDigital', CAST(AudioFile AS CHAR) 'AudioFile' FROM Sitios`;
     db.query(consulta, (err, result) => {
         if (err) {
             res.status(500).send();
